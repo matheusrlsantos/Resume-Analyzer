@@ -3,7 +3,9 @@
 
 #include "read_arqui.h"
 
-char* len_arq(arq* len){
+int load_arq(void){
+
+ int* len_arq(arq* len){
 
    len->file = fopen(len->filename, "r"); 
 
@@ -13,56 +15,47 @@ char* len_arq(arq* len){
    }
 
    fseek(len->file, 0, SEEK_END);
-   long size = ftell(len->file); //Think about it tomorrouw. 
+  len->filesize = ftell(len->file); 
+   rewind(len->file);
 
-   len->content = (char*)malloc(size + 1);  //Don't forget to allocate space for the NULL terminal 
+   return len->filesize;  
+ }
+
+ char* all_mall(arq* len){
+
+ len->content = (char*)malloc(len->filesize + 1);  
 
    if(len->content == NULL){
       printf("Memory allocation failed\n"); 
       return NULL; 
    }
+
+  return len->content; 
+
+ }
+
+
+ char* copy_arq(arq* nametext){
+
+   size_t read = fread(nametext->content, sizeof(char), nametext->filesize, nametext->file);
    
-   return len->content; 
-}
-
-
-FILE* read_arqui(arq* nametext){
-    nametext->file = fopen(nametext->filename, "r"); 
-
-   if (nametext == NULL){
-        printf("Error opening file: %s\n", nametext->filename); 
-        return; 
+   if(read == NULL){
+      printf("Don't have content in %s\n", nametext->file); 
+      return NULL; 
    }
-   return nametext->file; 
 
-}
+   if(read != nametext->filesize){
+        printf("Error copy file: %s\n", file); 
+      return NULL; 
+   }
+   nametext->content[nametext->filesize] = "\0"; 
 
-FILE* write_arqui(arq* nametext){
-    
-    nametext->file = fopen(nametext->filename, "w"); 
+   return nametext->content; 
+ }
 
-    if (nametext->file == NULL){
-        printf("Error opening file: %s\n", nametext->filename); 
-        return;
-    }
 
-    fprintf(nametext->file, "%s", nametext->filename);
-    return nametext->file; 
-} 
-
-FILE* append_arqui(arq* nametext){
-      nametext->file = fopen(nametext->filename, "a"); 
-
-    if (nametext->file == NULL){
-        printf("Error opening file: %s\n", nametext->filename); 
-        return;
-    }
-
-    fprintf(nametext->file, "%s", nametext->filename);
-    return nametext->file;
-}
-
-void close_arqui(arq* nametext){
+ void close_arqui(arq* nametext){
    fclose(nametext->file);
    return;  
-} 
+ } 
+}
