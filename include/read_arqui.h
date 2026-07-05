@@ -11,7 +11,7 @@ typedef struct arqui{
     long filesize;   
 }arq; 
 
-int load_arq(void); 
+int load_arq(arq* namtext);  
 
 
 #endif 

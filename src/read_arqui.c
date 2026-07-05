@@ -1,17 +1,17 @@
 #include <stdio.h> 
-#include <string.h> 
+#include <stdlib.h> 
 
-#include "read_arqui.h"
 
-int load_arq(void){
+#include "read_arqui.h" 
 
-  int* len_arq(arq* len){
 
-   len->file = fopen(len->filename, "r"); 
+  int len_arq(arq* len){
+
+   len->file = fopen(len->filename, "rb"); 
 
    if(len->file == NULL){
       printf("Error opening file: %s\n", len->filename); 
-      return NULL; 
+      return -1; 
    } 
 
    fseek(len->file, 0, SEEK_END);
@@ -59,4 +59,21 @@ int load_arq(void){
    nametext->file = NULL; 
    return;  
  } 
-}
+
+
+ int load_arq(arq* nametext){
+  
+  if(len_arq(nametext) == 0){
+    return -1; 
+  }
+  
+  if(all_mall(nametext) == NULL){
+    return -1; 
+  }
+   
+  if(copy_arq(nametext) == NULL){
+    return -1; 
+  }
+
+  return 0; 
+ }
