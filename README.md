@@ -20,11 +20,19 @@ In development
 
 ##### **Architeture Software**
 
-- [ ] FILE  // In development
-- [ ] String
+- [ X ] FILE  // Completed
+
+ Explanation: This module, have object read files anda save the content in the files, this way should use in other modules. 
+
+
+- [ ] String  // In developed 
+ Explanatio: In this module, filters pass-words that to whish, for so can recevie a feedback of next module. 
+
 - [ ] Feedback
 - [ ] Main 
 
+ Extra: A module extra that added to project, was linked list, in which is helping the module string. 
+ 
 ###### **Author** 
 
 Matheus Rodrigues 

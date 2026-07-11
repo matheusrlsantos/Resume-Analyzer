@@ -42,29 +42,54 @@ struct token* del_token(token *head, char* data){
      if(head == NULL){
         return NULL; 
      }
-     if(strcmp(head->data, token) == 0 && head->next !=NULL){
+     
+     if(strcmp(head->data, data) == 0 && head->next !=NULL){
         token *temp = head; 
-        head = head->next;
+        head = head->next; 
         free(temp); 
+        temp = NULL;
+         
+       return head; 
      }
+   
+      if(strcmp(head->data, data) == 0 && head->next ==NULL){
+         free(head); 
+         head = NULL; 
+         return NULL; 
+      }
 
      struct token* prev = head;
      struct token*  current = head->next; 
-     struct token*  next = head->next->next;  
+     
     
      
-     while(current->prev->next != NULL){
-        if(strcmp(current->data, token) == 0){ 
-          prev->next = next; 
+     while(current != NULL){
+        if(strcmp(current->data, data) == 0){ 
+          prev->next = current->next; 
           free(current);
+          break; 
         }else{
-      current = current->next;
+          prev = current; 
+          current = current->next;
         } 
      }
 
      return head; 
 
-}
+   }
+
+    struct token* destroy_all_list(token *head){
+      struct token* current = head; 
+      struct token* temp; 
+
+      while(current != NULL){
+         temp = current; 
+         temp = current->next; 
+         free(current); 
+         current = temp; 
+      }
+      return NULL; 
+   }
 
 
 
