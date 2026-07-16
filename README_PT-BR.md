@@ -20,10 +20,17 @@ Em desenvolvimeto
 
 ##### **Arquitetura do Software**
 
-- [ ] Arquivo // Em desenvolvimento 
-- [ ] Tokens
+- [ X ] Arquivo // Finalizado
+ Explicação: Neste módulo, tem como o objetivo ler arquivos e guardar os conteúdos destes arquivos, desta forma podendo usar em outros módulos. 
+
+- [ ] Tokens  // Em desenvolvimento
+Explicação: Neste módulo, vai filtrar os tokens que desejar, para então receber um feedback no próximo módulo.  
+
 - [ ] Feedback
 - [ ] Main 
+
+Extra: Um módulo extra teve que ser adicionado ao project, foi o modulo "linked list", no qual, ele vai auxiliar o module token. 
+
 
 ###### **Autor** 
 

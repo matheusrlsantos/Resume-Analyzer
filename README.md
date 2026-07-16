@@ -25,13 +25,13 @@ In development
  Explanation: This module, have object read files anda save the content in the files, this way should use in other modules. 
 
 
-- [ ] String  // In developed 
- Explanatio: In this module, filters pass-words that to whish, for so can recevie a feedback of next module. 
+- [ ] Token   // In developed 
+ Explanatio: In this module, going to filters tokens that to whish, for so can recevie a feedback of next module. 
 
 - [ ] Feedback
 - [ ] Main 
 
- Extra: A module extra that added to project, was linked list, in which is helping the module string. 
+ Extra: A module extra had that be added to project, was the module "linked list", in which it going to helping the module token. 
  
 ###### **Author** 
 

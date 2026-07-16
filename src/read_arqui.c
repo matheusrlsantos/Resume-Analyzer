@@ -2,7 +2,7 @@
 #include <stdlib.h> 
 
 
-#include "read_arqui.h" 
+#include "PATH.h" 
 
 
   int len_arq(arq* len){
