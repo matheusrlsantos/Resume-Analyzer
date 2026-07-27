@@ -4,7 +4,7 @@
 
 #include "LINKED_LIST.h"
 
-struct token* creat_token(token *head, char* data){
+token* creat_token(char* data){
      head = (token*)malloc(sizeof(token)); 
 
      if(head == NULL){
@@ -18,7 +18,7 @@ struct token* creat_token(token *head, char* data){
 }
 
 
-struct token* add_token(token *head, char* data){ 
+token* add_token(token *head, char* data){ 
 
     token *new_token = creat_token(head, data); 
      
@@ -38,7 +38,7 @@ struct token* add_token(token *head, char* data){
     return head; //head retrieved successfully. 
 }
 
-struct token* del_token(token *head, char* data){
+token* del_token(token *head, char* data){
      if(head == NULL){
         return NULL; 
      }
@@ -90,11 +90,3 @@ struct token* del_token(token *head, char* data){
       }
       return NULL; 
    }
-
-
-
-
-
-
-
-

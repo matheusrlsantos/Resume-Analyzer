@@ -20,7 +20,7 @@ Em desenvolvimeto
 
 ##### **Arquitetura do Software**
 
-- [ X ] Arquivo // Finalizado
+- [X] Arquivo // Finalizado
  Explicação: Neste módulo, tem como o objetivo ler arquivos e guardar os conteúdos destes arquivos, desta forma podendo usar em outros módulos. 
 
 - [ ] Tokens  // Em desenvolvimento

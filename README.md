@@ -20,7 +20,7 @@ In development
 
 ##### **Architeture Software**
 
-- [ X ] FILE  // Completed
+- [X] FILE  // Completed
 
  Explanation: This module, have object read files anda save the content in the files, this way should use in other modules. 
 
