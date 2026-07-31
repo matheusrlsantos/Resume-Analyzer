@@ -9,7 +9,7 @@ int db_open(const char *path){
 }
 
 
-void(void){
+void db_close(void){
     if(db != NULL){
         sqlite3_close(db); 
         db = NULL; 
