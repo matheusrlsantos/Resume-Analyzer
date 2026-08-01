@@ -3,6 +3,11 @@
 
 #include "LINKED_LIST.h" 
 
+define struct matching_data{
+    char * result; 
+    int  much;
+}match; 
+
 token *tokenize(char *str); 
 
 token *comp_token(token *list, char *data); 

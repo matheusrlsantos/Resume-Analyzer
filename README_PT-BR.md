@@ -29,7 +29,12 @@ Explicação: Neste módulo, vai filtrar os tokens que desejar, para então rece
 - [ ] Feedback
 - [ ] Main 
 
-Extra: Um módulo extra teve que ser adicionado ao project, foi o modulo "linked list", no qual, ele vai auxiliar o module token. 
+Extra:
+***Módulo Linked_list***
+ Um módulo extra teve que ser adicionado ao project, foi o modulo "linked list", no qual, ele vai auxiliar o module token. 
+
+ ***Módulo database***
+ Ele tem salvo as habilidade e sinônimos dentro dele, e é usado para pesquisar skills ou sinônimos. 
 
 
 ###### **Autor** 

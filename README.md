@@ -31,7 +31,12 @@ In development
 - [ ] Feedback
 - [ ] Main 
 
- Extra: A module extra had that be added to project, was the module "linked list", in which it going to helping the module token. 
+ Extra: 
+ ***Module Linked_list-***
+ A module extra had that be added to project, was the module "linked list", in which it going to helping the module token.
+
+ ***Module database*** 
+ It has saved the skills and synonyms into, and is use for looking skills or synonyms.  
  
 ###### **Author** 
 
