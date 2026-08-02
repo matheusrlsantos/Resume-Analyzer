@@ -14,7 +14,7 @@ int db_has_skill(const char * token){
         return 0; 
     }
     
-    const char *sql = "SELECT skill FROM Skills WHERE skill = ?;"; 
+    const char *sql = "SELECT skill FROM Skills LEFT JOIN Synonyms ON Skills.id = Synonyms.skill_id WHERE ? IN (Skills.skill, Synonyms.synonym);"; 
     
     sqlite3_stmt *stmt = NULL; 
     
@@ -48,4 +48,3 @@ void db_close(void){
         db = NULL; 
     }
 }
-

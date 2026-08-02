@@ -23,10 +23,10 @@ Em desenvolvimeto
 - [X] Arquivo // Finalizado
  Explicação: Neste módulo, tem como o objetivo ler arquivos e guardar os conteúdos destes arquivos, desta forma podendo usar em outros módulos. 
 
-- [ ] Tokens  // Em desenvolvimento
+- [X] Tokens  // Finalizado 
 Explicação: Neste módulo, vai filtrar os tokens que desejar, para então receber um feedback no próximo módulo.  
 
-- [ ] Feedback
+- [ ] Feedback // Em desenvolvimento 
 - [ ] Main 
 
 Extra:

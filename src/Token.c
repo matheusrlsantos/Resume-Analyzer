@@ -47,25 +47,48 @@ void normalize_token(token *head){
 
 
 
-void matching(token* head, match* date){
+match* matching(token* head){
     token* current = head; 
+    match* date = NULL; 
+
+ 
 
     while(current != NULL){
         
-        if(strcmp(current->data, path) == 0){
-          add_token(date, current->data);
+        if(db_has_skill(current->data)){
+          date = add_node(date, current->data);
           
 
-         date->much++; 
+        
         } 
 
-        current = current->next; 
+        current = current->next;
+         
 
     }
+    return date; 
 
 }
 
+int load_token(token* text){
+  token *tokens = tokenize(text); 
+  
+  if(tokens == NULL){
+    return -1; 
+  }
+  tokens = normalize_token(tokens); 
 
+  if(tokens == NULL){
+    return -1; 
+  }
+   match* date = matching(tokens); 
+
+  if(tokens == NULL){
+    return -1; 
+  }
+
+  return 0; 
+ }
 
 
 

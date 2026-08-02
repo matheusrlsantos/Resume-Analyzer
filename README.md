@@ -25,10 +25,10 @@ In development
  Explanation: This module, have object read files anda save the content in the files, this way should use in other modules. 
 
 
-- [ ] Token   // In developed 
+- [X] Token   // Completed 
  Explanatio: In this module, going to filters tokens that to whish, for so can recevie a feedback of next module. 
 
-- [ ] Feedback
+- [ ] Feedback // In Developed 
 - [ ] Main 
 
  Extra: 

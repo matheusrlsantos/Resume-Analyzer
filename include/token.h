@@ -3,9 +3,11 @@
 
 #include "LINKED_LIST.h" 
 
-define struct matching_data{
-    char * result; 
-    int  much;
+typedef struct matching_data{
+    char * skill; 
+    int  score;
+
+    struct matching_data *next; 
 }match; 
 
 token *tokenize(char *str); 
