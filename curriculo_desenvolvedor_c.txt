@@ -1,0 +1,86 @@
+================================================================================
+                                MATHEUS SILVA
+                         Desenvolvedor C / C Specialist
+================================================================================
+Email: matheus@exemplo.com | Telefone: (11) 99999-8888
+GitHub: github.com/matheus-dev | LinkedIn: linkedin.com/in/matheus-dev
+Localização: Brasil | Sistema Operacional: Debian 13 (GNU/Linux)
+
+--------------------------------------------------------------------------------
+RESUMO PROFISSIONAL
+--------------------------------------------------------------------------------
+Desenvolvedor focado em desenvolvimento de sistemas em Linguagem C (ANSI C, C11, 
+C17, C/C++), com sólida experiência na implementação de estruturas de dados 
+eficientes, gerenciamento dinâmico de memória e integração com bancos de dados 
+relacionais como SQLite. Proficiente na utilização de ferramentas do ecossistema 
+POSIX / Linux, compilação via GCC/Makefiles e depuração avançada com GDB e Valgrind.
+
+--------------------------------------------------------------------------------
+COMPETÊNCIAS TÉCNICAS E TECNOLOGIAS (SINÔNIMOS & CORE C)
+--------------------------------------------------------------------------------
+• Linguagens & Padrões:
+  - Linguagem C, ANSI C, ISO/IEC 9899 (C99, C11, C17)
+  - C/C++ (Sistemas de Baixo Nível e Computação de Alta Performance)
+  - C Embutido / Embedded C (Conceitos de Sistemas Embarcados)
+
+• Estruturas de Dados & Algoritmos:
+  - Listas Encadeadas (Linked Lists), Árvores Binárias, Grafos, Hash Maps
+  - Ponteiros, Aritmética de Ponteiros, Alocação Dinâmica (malloc, calloc, realloc, free)
+  - Manipulação e Tokenização de Strings (String Processing / Parsing)
+
+• Ferramentas de Compilação & Depuração:
+  - Compilador GCC (GNU Compiler Collection), Clang
+  - Depuração de Código: GDB (GNU Debugger)
+  - Análise de Memória & Leak Detection: Valgrind
+  - Automação de Build: Make, Makefiles, CMake
+
+• Bancos de Dados & APIs:
+  - SQLite3 (C API / Prepared Statements / SQLite Embeddable DB)
+  - POSIX Threads (pthreads), System Calls Linux, I/O em Arquivos
+
+• Ambientes & Ferramentas de Desenvolvimento:
+  - Sistema Operacional: Linux Debian 13 (Trixie), Bash/Shell Scripting
+  - Editor / IDE: VS Code, Vim
+  - Controle de Versão: Git, GitHub
+
+--------------------------------------------------------------------------------
+PROJETOS EM DESTAQUE
+--------------------------------------------------------------------------------
+[Projeto 1] Resume Analyzer (Analisador de Currículos em C)
+• Descrição: Sistema desenvolvido do zero em C11 para análise, filtragem e
+  tokenização automatizada de currículos e perfis profissionais.
+• Funcionalidades:
+  - Implementação de listas encadeadas customizadas para armazenamento eficiente de tokens.
+  - Conexão e consultas otimizadas ao banco de dados SQLite via C API (sqlite3.h).
+  - Normalização de textos, busca por sinonímia e correspondência de competências.
+• Tecnologias: C11, GCC, SQLite3, GDB, Valgrind, Debian Linux.
+
+[Projeto 2] Sistema de Gerenciamento de Memória / Módulo I/O Posix
+• Descrição: Módulo utilitário para alocação segura de memória e manipulação
+  de arquivos em ambiente Linux.
+• Funcionalidades:
+  - Prevenção contra vazamentos de memória (Memory Leaks) e Buffer Overflows.
+  - Implementação de log estruturado para depuração de erros em tempo de execução.
+• Tecnologias: ANSI C, Linux System Calls, Makefiles.
+
+--------------------------------------------------------------------------------
+EXPERIÊNCIA PROFISSIONAL
+--------------------------------------------------------------------------------
+Desenvolvedor de Software C / C++ (Projetos / Freelance)    | 2024 - Presente
+• Desenvolvimento de módulos em C voltados para processamento de dados de alta performance.
+• Criação de bibliotecas estáticas e dinâmicas (.a / .so) para reaproveitamento de código.
+• Resolução de bugs complexos de tempo de execução (Segmentation Faults, Dangling Pointers) 
+  utilizando depuração via GDB e inspeção de memória com Valgrind.
+
+--------------------------------------------------------------------------------
+FORMAÇÃO ACADÊMICA
+--------------------------------------------------------------------------------
+Bacharelado / Tecnólogo em Ciência da Computação (ou Análise de Sistemas)
+Instituição de Ensino Superior | Conclusão Prevista: 2026
+
+--------------------------------------------------------------------------------
+IDIOMAS
+--------------------------------------------------------------------------------
+• Português: Nativo
+• Inglês: Técnico (Leitura e escrita fluentes de documentações da ISO C / POSIX)
+================================================================================

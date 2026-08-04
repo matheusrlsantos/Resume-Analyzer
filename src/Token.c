@@ -1,15 +1,21 @@
-#include <stdio.h> 
 #include <string.h> 
 #include <ctype.h> 
+#include <stdlib.h>
+#include <stdio.h> 
 
-include "Token.h" 
-include "Linked_list.h" 
+#include "Token.h" 
+#include "Linked_list.h" 
+#include "Database.h"
+#include "File.h" 
 
-token *tokenize(char *data){
-if(data == NULL){
+token *tokenize(arq *data){
+if(data->content == NULL){
     return NULL; 
 }
-char *word = strtok(data, '' '\n' '\t' ';' ',' '.' '?' '!' ':' ); 
+
+const char *delimiters = " \n\r\t,;:!?-=/\\()[]{}";
+
+char *word = strtok(data->content, delimiters); 
 
 if(word == NULL){
     return NULL; 
@@ -18,23 +24,27 @@ if(word == NULL){
 token *head = NULL; 
 
    while(word != NULL){
-    head = add_token(head, word);
+    if(strlen(word) != 0){    
+      char* word_copy = strdup(word); 
+      head = add_node(head, word_copy);
+    
+    } 
      
-    word = strtok(NULL, " \n\t;,?!:" );   
+    word = strtok(NULL,delimiters);   
   }
 
     return head; 
 }
 
 
-void normalize_token(token *head){
+token* normalize_token(token *head){
 
     token *current = head; 
 
     while(current != NULL){
       int i = 0; 
        
-      while(current->data[i] != \0){
+      while(current->data[i] != '\0'){
        
        current->data[i] = toupper(current->data[i]);
        
@@ -42,52 +52,101 @@ void normalize_token(token *head){
       }
         current = current->next; 
     }
-
-}
+    return head; 
+} 
 
 
 
 match* matching(token* head){
     token* current = head; 
-    match* date = NULL; 
-
+    match* list_head = NULL; 
+    match* list_tail = NULL; 
+    
+   
  
 
     while(current != NULL){
-        
-        if(db_has_skill(current->data)){
-          date = add_node(date, current->data);
-          
+      
+      int achou = db_has_skill(current->data);
+       
 
+        if(achou){
+          match* new_match = calloc(1, sizeof(match));
+            if(new_match== NULL){
+              current = current->next; 
+              continue; 
+            }
+
+            new_match->skill = strdup(current->data);
+            new_match->next = NULL; 
+
+            if(list_head == NULL){
+
+               list_head = new_match; 
+               list_tail = new_match;
         
+            }else{
+
+               list_tail->next = new_match; 
+               list_tail = new_match; 
+
+            }
+
+          }
+        current = current->next; 
+
         } 
 
-        current = current->next;
-         
-
-    }
-    return date; 
+    
+    return list_head; 
 
 }
 
-int load_token(token* text){
-  token *tokens = tokenize(text); 
+match* load_token(arq* text){
+  if(text == NULL) return NULL; 
+
+  token *local_tokens = tokenize(text); 
   
-  if(tokens == NULL){
-    return -1; 
+  if(local_tokens == NULL){
+    return NULL; 
   }
-  tokens = normalize_token(tokens); 
+  local_tokens = normalize_token(local_tokens); 
 
-  if(tokens == NULL){
-    return -1; 
+  if(local_tokens == NULL){
+    return NULL; 
   }
-   match* date = matching(tokens); 
+   match* date = matching(local_tokens); 
 
-  if(tokens == NULL){
-    return -1; 
+  if(date == NULL){
+    return NULL; 
   }
+   if(text->file != NULL){
+   fclose(text->file);
+   text->file = NULL; 
+   }
 
-  return 0; 
+   if(text->content != NULL){
+   free(text->content); 
+   text->content  = NULL; 
+   }
+
+   while(local_tokens != NULL){
+   token *temp = local_tokens; 
+   local_tokens = local_tokens->next; 
+    
+   
+   if(temp->data != NULL){
+    free(temp->data); 
+   }
+   
+   free(temp); 
+   }
+  local_tokens = NULL; 
+
+
+
+
+  return date; 
  }
 
 

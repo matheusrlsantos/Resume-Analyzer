@@ -2,9 +2,10 @@
 #include <stdlib.h> 
 #include <string.h> 
 
-#include "LINKED_LIST.h"
+#include "Linked_list.h"
+#include "Token.h"
 
-token* creat_node(char* data){
+token* creat_node(token* head, char* data){
      head = (token*)malloc(sizeof(token)); 
 
      if(head == NULL){
@@ -58,8 +59,8 @@ token* del_node(token *head, char* data){
          return NULL; 
       }
 
-     struct token* prev = head;
-     struct token*  current = head->next; 
+     token* prev = head;
+     token*  current = head->next; 
      
     
      
@@ -78,14 +79,16 @@ token* del_node(token *head, char* data){
 
    }
 
-    struct token* destroy_all_list(token *head){
-      struct token* current = head; 
-      struct token* temp; 
+    token* destroy_all_list(token *head){
+      token* current = head; 
+      token* temp; 
 
       while(current != NULL){
-         temp = current; 
          temp = current->next; 
-         free(current); 
+
+         free(current->data); 
+         free(current);
+
          current = temp; 
       }
       return NULL; 

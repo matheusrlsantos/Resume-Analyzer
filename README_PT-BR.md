@@ -26,8 +26,11 @@ Em desenvolvimeto
 - [X] Tokens  // Finalizado 
 Explicação: Neste módulo, vai filtrar os tokens que desejar, para então receber um feedback no próximo módulo.  
 
-- [ ] Feedback // Em desenvolvimento 
-- [ ] Main 
+- [x] Feedback // Finalizado 
+ Explicação; Neste módulo, nele vai retornar retornar um feedback sobre o resultado dos encontros. 
+
+- [x] Main // Finalizado 
+  Explicação: Neste módulo, a coordenação de todas as funções, serão executadas pelo main. 
 
 Extra:
 ***Módulo Linked_list***
