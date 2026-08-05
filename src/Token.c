@@ -8,6 +8,8 @@
 #include "Database.h"
 #include "File.h" 
 
+// All information about the file is stored in file structure, which is defined in Token.h. 
+
 token *tokenize(arq *data){
 if(data->content == NULL){
     return NULL; 

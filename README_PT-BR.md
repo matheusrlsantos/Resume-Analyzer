@@ -1,8 +1,6 @@
 # ***Resume Analyzer*** 
 
-Este é meu primeiro projeto em minha vida, então eu peço que olhe o meu projeo. O projecto Resume Analyzer está sendo feito na linguagem C, por que eu venho estudando nela por uns sete ou oito meses, talvez? De qualquer forma, o que eu quero dizer é, aproveite que já leu até aqui, e dê uma olhadinha no meu projeto. 
-
-
+Este projeto foi feito por um junior entusiasmado com programação. O projeto tem como objetivo, desenvolver o conhecimento técnico, habiliades de estruturação de projetos, soft skills, e boas práticas de programação. 
 
 ## **objetivos** 
 - Ler curriculos
@@ -10,13 +8,14 @@ Este é meu primeiro projeto em minha vida, então eu peço que olhe o meu proje
 - Gerar um feedback após a comparação
 
 ### **Status Atual** 
-Em desenvolvimeto
+Versão 1.0 finalizada. 
 
 #### **Tecnologias**
 
 - **lingugaem:** `C` 
 - **Compilador:** `GCC`
 - **IDE**: Visual Studio Code - Microsoft 
+- **Sistema operacional:** Linux - Debian 13 
 
 ##### **Arquitetura do Software**
 
@@ -33,12 +32,15 @@ Explicação: Neste módulo, vai filtrar os tokens que desejar, para então rece
   Explicação: Neste módulo, a coordenação de todas as funções, serão executadas pelo main. 
 
 Extra:
+
 ***Módulo Linked_list***
  Um módulo extra teve que ser adicionado ao project, foi o modulo "linked list", no qual, ele vai auxiliar o module token. 
 
  ***Módulo database***
  Ele tem salvo as habilidade e sinônimos dentro dele, e é usado para pesquisar skills ou sinônimos. 
 
+***Comando de compilação - SHELL***
+-  gcc -g -Iinclude src/*.c -o resume_analyzer_1.0 -lsqlite3
 
 ###### **Autor** 
 

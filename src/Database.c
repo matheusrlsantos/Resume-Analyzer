@@ -4,6 +4,8 @@
 #include <sqlite3.h> 
 #include <stdlib.h> 
 
+// All information about the file is stored in file structure, which is defined in Database.h. 
+
 static sqlite3 *db = NULL;
 
 

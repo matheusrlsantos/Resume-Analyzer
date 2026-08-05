@@ -10,7 +10,7 @@
 
 int main(void){
  
-    db_open("/home/matheus/Projetos/Resume-Analyzer/database/database.db");
+    db_open("database/database.db");
     
     printf("Welcome to Resume Analyzer!\n");
 

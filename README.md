@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 # ***Resume Analyzer*** 
 
-This my first project im my life, so, I aks that look my project. The project Resume Analyzer is do in C, because I was study dev for it as seven ou eight mouths, maybe? Whatever, what I mean it, enjoy that was read so far, and give a chance for see my project. 
-
+This project was done by a junior is enthusiastic about programming. The project has objective developed technical knowledge, skill of projetcts structing, as well as soft skills and best practices in programing. 
 
 ## **objectives** 
 - Read Resume  
@@ -10,13 +8,15 @@ This my first project im my life, so, I aks that look my project. The project Re
 - Return in finale a feedback about resume 
 
 ### **Current status** 
-In development 
+Version 1.0 completed
 
 #### **Technologias**
 
 - **leaguage:** `C` 
 - **Compiler:** `GCC`
 - **IDE**: Visual Studio Code - Microsoft 
+- **Operating system:** Linux - Debian 13 
+- **Debugging:** GNU Debugger
 
 ##### **Architeture Software**
 
@@ -35,12 +35,16 @@ In development
  Explanation: In this module, the coordination of all function, will be execute for main
 
  Extra: 
+
  ***Module Linked_list-***
  A module extra had that be added to project, was the module "linked list", in which it going to helping the module token.
 
  ***Module database*** 
  It has saved the skills and synonyms into, and is use for looking skills or synonyms.  
  
+ ***Comand to compilation - SHELL*** 
+-  gcc -g -Iinclude src/*.c -o resume_analyzer_1.0 -lsqlite3
+
 ###### **Author** 
 
 Matheus Rodrigues 

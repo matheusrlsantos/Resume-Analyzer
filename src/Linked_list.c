@@ -5,6 +5,8 @@
 #include "Linked_list.h"
 #include "Token.h"
 
+// All information about the file is stored in file structure, which is defined in Linked_list.h. 
+
 token* creat_node(token* head, char* data){
      head = (token*)malloc(sizeof(token)); 
 

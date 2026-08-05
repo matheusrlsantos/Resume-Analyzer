@@ -1,6 +1,7 @@
 #include <stdio.h> 
 #include <stdlib.h> 
 
+// All information about the file is stored in file structure, which is defined in File.h. 
 
 #include "File.h" 
 

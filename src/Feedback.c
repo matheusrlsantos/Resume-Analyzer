@@ -4,6 +4,8 @@
 #include "Token.h"
 #include "Feedback.h"
 
+// All information about the file is stored in file structure, which is defined in Feedback.h. 
+
 void feedback(match* date){
     match* current = date; 
     
