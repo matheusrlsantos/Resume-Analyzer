@@ -12,7 +12,7 @@ Version 1.0 completed
 
 #### **Technologias**
 
-- **leaguage:** `C`, 'SQL'
+- **leaguage:** `C` `SQL`
 - **Compiler:** `GCC`
 - **IDE**: Visual Studio Code - Microsoft 
 - **Operating system:** Linux - Debian 13 
