@@ -12,10 +12,11 @@ Versão 1.0 finalizada.
 
 #### **Tecnologias**
 
-- **lingugaem:** `C` 
+- **lingugaem:** `C`, 'SQL'
 - **Compilador:** `GCC`
 - **IDE**: Visual Studio Code - Microsoft 
 - **Sistema operacional:** Linux - Debian 13 
+- **Banco de Dados: ** SQLite 
 
 ##### **Arquitetura do Software**
 
